@@ -1,31 +1,65 @@
-import React from "react";
-import { FooterSection } from "@/components/custom/footer-section";
-import { SocialMediaLinks } from "./SocialMediaLinks";
-import { footerLinks } from "@/data/footerLinks";
+// components/Footer.tsx
+
+import Link from "next/link";
 import Image from "next/image";
+import { FC } from "react";
 
-export default function Footer() {
+const Footer: FC = () => {
   return (
-    <>
-      <div className="grid lg:grid-cols-3 bg-secondary pt-4">
-        <section>
-          <FooterSection title="EXPLORE" links={footerLinks.explore} />
-        </section>
+    <footer className="bg-primary dark:bg-card text-stone-700 dark:text-stone-300 py-8">
+      <div className="container mx-auto flex flex-col items-center md:flex-row justify-between space-y-4 md:space-y-0 px-4">
+        {/* Logo */}
+        <div className="flex items-center space-x-2">
+          <Image
+            src="/portada.png" 
+            alt="Logo"
+            width={40}
+            height={40}
+          />
+          <span className="text-xl font-bold">Mi Sitio Web</span>
+        </div>
 
-        <section className="flex flex-col justify-center items-center">
-          <div className="py-5">
-            <Image width={100} height={100} className="h-[100px]" src="/" alt="logo" />
-          </div>
-          <SocialMediaLinks />
-        </section>
+        {/* Links de navegación */}
+        <div className="flex space-x-6">
+          <Link href="/about">
+            <p className="hover:text-gray-300 transition">Sobre nosotros</p>
+          </Link>
+          <Link href="/services">
+            <p className="hover:text-gray-300 transition">Servicios</p>
+          </Link>
+          <Link href="/contact">
+            <p className="hover:text-gray-300 transition">Contacto</p>
+          </Link>
+        </div>
 
-        <section>
-          <FooterSection title="INFORMACION" links={footerLinks.information} />
-        </section>
+        {/* Iconos de redes sociales */}
+        <div className="flex space-x-4">
+          <Link href="https://facebook.com" target="_blank">
+            <Image
+              src="/facebook-icon.svg" // Asegúrate de tener el archivo en public/
+              alt="Facebook"
+              width={24}
+              height={24}
+            />
+          </Link>
+          <Link href="https://twitter.com" target="_blank">
+            <Image
+              src="/twitter-icon.svg" // Asegúrate de tener el archivo en public/
+              alt="Twitter"
+              width={24}
+              height={24}
+            />
+          </Link>
+        </div>
       </div>
-      <div className="flex justify-center bg-secondary text-slate-700 py-5 font-poppinsRegular">
-        Copyright © 2023 &quot;El Método&quot; Adulma.
+
+      {/* Derechos de autor */}
+      <div className="mt-8 text-center text-sm text-stone-700 dark:text-stone-400">
+        © {new Date().getFullYear()} Mi Sitio Web. Todos los derechos
+        reservados.
       </div>
-    </>
+    </footer>
   );
-}
+};
+
+export default Footer;

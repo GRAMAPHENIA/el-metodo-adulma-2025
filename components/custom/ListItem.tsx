@@ -10,7 +10,7 @@ import Link from "next/link";
 export const ListItem = ({ item }: { item: MenuItemProps }) => {
   return (
     <NavigationMenuItem>
-      <NavigationMenuTrigger className="bg-white dark:bg-card ">
+      <NavigationMenuTrigger className="bg-transparent text-stone-800 dark:text-stone-100">
         {item.label}
       </NavigationMenuTrigger>
       <NavigationMenuContent>

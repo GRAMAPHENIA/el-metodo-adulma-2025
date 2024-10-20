@@ -17,10 +17,11 @@ export const menuItems: MenuItemProps[] = [
       {
         title: "Contacto",
         href: "/contactos",
-        description:
-          "Ponte en contacto con nosotros para más información o consultas.",
+        description: "Ponte en contacto con nosotros para más información o consultas.",
       },
     ],
+    title: undefined,
+    subItems: undefined
   },
   {
     label: "Contenidos",
@@ -28,16 +29,16 @@ export const menuItems: MenuItemProps[] = [
       {
         title: "Blog",
         href: "/blog",
-        description:
-          "Lee nuestros artículos sobre bienestar y vida saludable para adultos mayores.",
+        description: "Lee nuestros artículos sobre bienestar y vida saludable para adultos mayores.",
       },
       {
         title: "Galería",
         href: "/galeria",
-        description:
-          "Explora nuestras imágenes y videos que capturan lo mejor de nuestras actividades.",
+        description: "Explora nuestras imágenes y videos que capturan lo mejor de nuestras actividades.",
       },
     ],
+    title: undefined,
+    subItems: undefined
   },
   {
     label: "Servicios",
@@ -45,9 +46,10 @@ export const menuItems: MenuItemProps[] = [
       {
         title: "Capacitación",
         href: "/capacitaciones",
-        description:
-          "Descubre los cursos y talleres que ofrecemos para mantenerte en forma.",
+        description: "Descubre los cursos y talleres que ofrecemos para mantenerte en forma.",
       },
     ],
+    title: undefined,
+    subItems: undefined
   },
 ];

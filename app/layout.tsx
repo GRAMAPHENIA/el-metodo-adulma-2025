@@ -26,9 +26,8 @@ export default function RootLayout({
     <html lang="es">
       <body className={exo.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <header className="px-24 py-4">
-            <Topbar/>
-          </header>
+          <Topbar />
+
           <main>{children}</main>
           <Footer />
         </ThemeProvider>

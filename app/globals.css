@@ -20,20 +20,20 @@
     --accent-foreground: 24 14% 5%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 36 100% 98%;
-    --border: 36 60% 85%;
+    --border: 36 95% 70%;
     --input: 36 60% 85%;
     --ring: 36 95% 70%;
     --radius: 0.3rem;
   }
   
   .dark {
-    --background: 24 14% 10%; /* Ajustado para modo oscuro */
+    --background: 36 5% 13%; /* Ajustado para modo oscuro */
     --foreground: 36 100% 95%; 
-    --card: 24 14% 10%; 
+    --card: 30 6% 25%; 
     --card-foreground: 36 100% 95%; 
     --popover: 24 14% 10%; 
     --popover-foreground: 36 100% 95%; 
-    --primary: 36 90% 50%; 
+    --primary: 36 14% 18%; 
     --primary-foreground: 36 100% 95%; 
     --secondary: 24 10% 25%;
     --secondary-foreground: 36 100% 95%; 
