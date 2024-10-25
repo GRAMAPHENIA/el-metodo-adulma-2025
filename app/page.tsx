@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <section className="p-10 bg-primary dark:bg-secondary">
+      <section className="p-10 ">
         <VideoOverlay />
       </section>
       <CardMision />

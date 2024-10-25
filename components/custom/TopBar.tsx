@@ -16,16 +16,16 @@ export default function Topbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <section className="flex justify-center mt-0 mx-auto">
-      <div className="py-4 px-4 flex justify-between items-center bg-primary/70 dark:bg-secondary/80 fixed z-10 rounded-b-xl w-full md:w-[1200px] backdrop-blur-md ">
+    <section className="flex justify-center mt-4 mx-auto">
+      <div className="py-4 px-4 flex justify-between items-center bg-primary/70 dark:bg-secondary/80 fixed z-10 rounded-xl w-full md:w-[1200px] backdrop-blur-md ">
         {/* <div className="flex items-center">
           <Image height={35} width={35} src={"/"} alt="Logo" />
         </div> */}
 
-        <p className="ml-2 text-stone-600 dark:text-stone-300">EL METODO</p>
+        <p className="ml-2 text-stone-600 dark:text-stone-300 font-bold">EL METODO</p>
 
         {/* Menú para dispositivos grandes */}
-        <div className="hidden lg:flex flex-1 justify-center list-none text-gray-500 dark:text-gray-300 ">
+        <div className="hidden lg:flex flex-1 justify-center list-none text-gray-500 dark:text-gray-300">
           <NavigationMenu>
             {menuItems.map((item, index) => (
               <ListItem key={index} item={item} />

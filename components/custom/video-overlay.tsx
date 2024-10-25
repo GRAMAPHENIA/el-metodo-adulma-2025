@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { Button } from "@/components/ui/button";
 import { Sen } from "next/font/google";
 
 const sen = Sen({
@@ -11,9 +10,9 @@ const sen = Sen({
 
 const VideoOverlay: React.FC = () => {
   return (
-    <div className="relative w-full h-[350px] overflow-hidden shadow-xl rounded-lg mt-20"> 
+    <div className="relative w-full h-[350px] overflow-hidden shadow-xl rounded-lg mt-20">
       <video
-        className="absolute top-0 left-0 w-full h-full object-cover filter sepia opacity-90 brightness-50 contrast-150 saturate-200 x"
+        className="absolute top-0 left-0 w-full h-full object-cover filter sepia opacity-90 brightness-50 contrast-150 saturate-200 font"
         src="/video-hero.mp4"
         autoPlay
         muted
