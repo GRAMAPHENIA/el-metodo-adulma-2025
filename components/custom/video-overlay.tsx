@@ -11,7 +11,7 @@ const sen = Sen({
 
 const VideoOverlay: React.FC = () => {
   return (
-    <div className="relative w-full h-[350px] overflow-hidden shadow-xl rounded-lg mt-14">
+    <div className="relative w-full h-[350px] overflow-hidden shadow-xl rounded-lg mt-20"> 
       <video
         className="absolute top-0 left-0 w-full h-full object-cover filter sepia opacity-90 brightness-50 contrast-150 saturate-200 x"
         src="/video-hero.mp4"

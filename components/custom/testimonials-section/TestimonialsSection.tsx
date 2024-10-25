@@ -20,24 +20,21 @@ const testimonials: Testimonial[] = [
     name: "Alice Johnson",
     quote:
       "This product has completely transformed my workflow. I can't imagine working without it now!",
-    image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    image: "/avatares/lady-finale-two.webp",
   },
   {
     id: 2,
     name: "Bob Smith",
     quote:
       "The customer support team is incredibly responsive and helpful. They've gone above and beyond to assist me.",
-    image:
-      "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    image: "/avatares/lady-finale-three.webp",
   },
   {
     id: 3,
     name: "Carol Davis",
     quote:
       "I've tried many similar products, but this one stands out for its intuitive design and powerful features.",
-    image:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    image: "/avatares/lady-three-blur.webp",
   },
   {
     id: 4,
@@ -100,7 +97,7 @@ const TestimonialsSection: React.FC = () => {
     <section className="py-40 px-20 bg-stone-100 dark:bg-popover">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-8">
-          What Our Customers Say
+          Lo que dicen nuestros clientes
         </h2>
         <div className="relative">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -155,7 +152,7 @@ const TestimonialsSection: React.FC = () => {
         <div className="mt-10 text-center">
           <Link href="/testimonials">
             <Button variant="default" size="lg">
-              Read More Testimonials
+              Mas testimonios
             </Button>
           </Link>
         </div>

@@ -16,8 +16,8 @@ export default function Topbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <section className="flex justify-center mt-4 mx-auto">
-      <div className="py-2 px-2 flex justify-between items-center bg-primary dark:bg-secondary/80 fixed z-10 rounded-full w-[320px] md:w-[900px] backdrop-blur-md ">
+    <section className="flex justify-center mt-0 mx-auto">
+      <div className="py-4 px-4 flex justify-between items-center bg-primary/70 dark:bg-secondary/80 fixed z-10 rounded-b-xl w-full md:w-[1200px] backdrop-blur-md ">
         {/* <div className="flex items-center">
           <Image height={35} width={35} src={"/"} alt="Logo" />
         </div> */}
