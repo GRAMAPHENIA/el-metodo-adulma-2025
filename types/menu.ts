@@ -1,5 +1,5 @@
 export interface MenuItemProps {
-  title: ReactNode;
+  title: string;
   subItems: any;
   label: string;
   links: {
