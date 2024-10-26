@@ -1,11 +1,11 @@
 import { useForm as useReactHookForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { schema, FormValues } from "../utils/validation";
-import { useToast } from "@/hooks/use-toast"; 
+import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 
 export function useContactForm() {
-  const { addToast } = useToast(); 
+  const { toast } = useToast();
   const {
     register,
     handleSubmit: handleReactHookSubmit,
@@ -30,25 +30,25 @@ export function useContactForm() {
       });
 
       if (response.ok) {
-        addToast({
+        toast({
           title: "Correo enviado",
           description: "Tu mensaje ha sido enviado con éxito.",
-          status: "success",
+          // status: "success",
         });
         reset(); // Limpiar formulario
       } else {
         const result = await response.json();
-        addToast({
+        toast({
           title: "Error",
           description: result.error || "Hubo un problema al enviar el correo.",
-          status: "error",
+          // status: "error",
         });
       }
     } catch (error) {
-      addToast({
+      toast({
         title: "Error",
         description: "Hubo un problema al enviar el correo.",
-        status: "error",
+        // status: "error",
       });
     } finally {
       setSubmitting(false);
