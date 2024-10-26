@@ -1,4 +1,3 @@
-// BlogSection.tsx
 "use client";
 
 import { useState } from "react";
@@ -19,9 +18,8 @@ export default function BlogSection() {
   );
 
   return (
-    <section className="container mx-auto px-4 py-8 mt-20">
-      <h1 className="text-4xl font-bold mb-8 text-center">Nuestro Blog</h1>
-
+    <section className="container mx-auto px-8 py-8 mt-10">
+      <h1 className="text-7xl font-bold py-10 text-center">Nuestro Blog</h1>
       <div className="flex flex-col md:flex-row justify-between items-center mb-8">
         <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
         <CategoryFilter

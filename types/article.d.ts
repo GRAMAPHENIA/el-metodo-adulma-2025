@@ -1,4 +1,3 @@
-// types/article.d.ts
 export interface Article {
   id: number;
   title: string;
@@ -7,4 +6,5 @@ export interface Article {
   author: string;
   image: string;
   category: string;
+  url: string;
 }
