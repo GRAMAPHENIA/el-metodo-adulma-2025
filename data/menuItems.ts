@@ -20,7 +20,7 @@ export const menuItems: MenuItemProps[] = [
         description: "Ponte en contacto con nosotros para más información o consultas.",
       },
     ],
-    title: undefined,
+    title: "",
     subItems: undefined
   },
   {
@@ -37,7 +37,7 @@ export const menuItems: MenuItemProps[] = [
         description: "Explora nuestras imágenes y videos que capturan lo mejor de nuestras actividades.",
       },
     ],
-    title: undefined,
+    title: "",
     subItems: undefined
   },
   {
@@ -49,7 +49,7 @@ export const menuItems: MenuItemProps[] = [
         description: "Descubre los cursos y talleres que ofrecemos para mantenerte en forma.",
       },
     ],
-    title: undefined,
+    title: "",
     subItems: undefined
   },
 ];
