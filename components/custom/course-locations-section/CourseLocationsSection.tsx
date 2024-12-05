@@ -2,7 +2,6 @@
 
 import React from 'react'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
 
 interface CourseLocation {
   name: string
@@ -40,7 +39,7 @@ const courseLocations: CourseLocation[] = [
 
 export function CourseLocationsSection() {
   return (
-    <section className=" bg-stone-100 dark:bg-popover my-40 px-20 py-40">
+    <section className=" bg-stone-100 dark:bg-popover my-40 lg:px-20 py-40">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-8">Nuestras sedes</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

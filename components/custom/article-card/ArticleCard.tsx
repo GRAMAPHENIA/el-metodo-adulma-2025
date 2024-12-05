@@ -17,14 +17,14 @@ interface ArticleCardProps {
 
 export function ArticleCard({ article }: ArticleCardProps) {
   return (
-    <Card key={article.id} className="flex flex-col bg-outline my-4">
+    <Card key={article.id} className="flex flex-col bg-card/80 my-4">
       <CardHeader>
         <Image
           width={300}
           height={300}
           src={article.image}
           alt={article.title}
-          className="w-full h-48 object-cover rounded-t-lg"
+          className="w-full h-auto object-cover rounded-lg"
         />
       </CardHeader>
       <CardContent className="flex-grow">

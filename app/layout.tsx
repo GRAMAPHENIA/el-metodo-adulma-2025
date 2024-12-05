@@ -27,8 +27,7 @@ export default function RootLayout({
       <body className={exo.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Topbar />
-
-          <main>{children}</main>
+          <main> {children}</main>
           <Footer />
         </ThemeProvider>
       </body>

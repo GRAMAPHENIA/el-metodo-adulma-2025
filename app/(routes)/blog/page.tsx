@@ -5,7 +5,7 @@ import { ArticleCard } from "@/components/custom/article-card/ArticleCard";
 import { CategoryFilter } from "@/components/custom/category-filter/CategoryFilter";
 import { SearchBar } from "@/components/custom/search-bar/SearchBar";
 import { articles } from "@/data/articles";
-import { categories } from "@/data/categories";
+import { Categories } from "@/data/categories";
 
 export default function BlogSection() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -25,7 +25,7 @@ export default function BlogSection() {
         <CategoryFilter
           selectedCategory={selectedCategory}
           setSelectedCategory={setSelectedCategory}
-          categories={categories}
+          categories={Categories}
         />
       </div>
 

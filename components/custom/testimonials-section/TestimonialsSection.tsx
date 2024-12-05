@@ -34,47 +34,42 @@ const testimonials: Testimonial[] = [
     name: "Carol Davis",
     quote:
       "I've tried many similar products, but this one stands out for its intuitive design and powerful features.",
-    image: "/avatares/lady-three-blur.webp",
+    image: "/avatares/lady-finale-four.webp",
   },
   {
     id: 4,
     name: "David Wilson",
     quote:
       "The recent updates have made a huge difference. It's clear the team is constantly working to improve the product.",
-    image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    image: "/avatares/lady-finale-three.webp",
   },
   {
     id: 5,
     name: "Eva Brown",
     quote:
       "I appreciate how customizable everything is. It fits perfectly into my existing setup.",
-    image:
-      "https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    image: "/avatares/lady-finale-four.webp",
   },
   {
     id: 6,
     name: "David Wilson",
     quote:
       "The recent updates have made a huge difference. It's clear the team is constantly working to improve the product.",
-    image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    image: "/avatares/lady-finale-three.webp",
   },
   {
     id: 7,
     name: "David Wilson",
     quote:
       "The recent updates have made a huge difference. It's clear the team is constantly working to improve the product.",
-    image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    image: "/avatares/lady-finale-four.webp",
   },
   {
     id: 8,
-    name: "David Wilson",
+    name: "Denis Wilson",
     quote:
       "The recent updates have made a huge difference. It's clear the team is constantly working to improve the product.",
-    image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    image: "/avatares/lady-finale-three.webp",
   },
 ];
 
@@ -94,7 +89,7 @@ const TestimonialsSection: React.FC = () => {
   };
 
   return (
-    <section className="py-40 px-20 bg-stone-100 dark:bg-popover">
+    <section className="py-40 lg:px-20 bg-stone-100 dark:bg-popover">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-8">
           Lo que dicen nuestros clientes

@@ -18,7 +18,7 @@ export const articles: Article[] = [
     description: "Explora los lugares más emocionantes y hermosos para visitar el próximo año.",
     date: "2023-10-10",
     author: "Carlos Rodríguez",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "/publicidades/publica-eco-dopler.webp",
     category: "Viajes",
     url: "routes/Blog"
   },
@@ -28,7 +28,7 @@ export const articles: Article[] = [
     description: "Comienza tu día con estas deliciosas y nutritivas opciones de desayuno.",
     date: "2023-10-05",
     author: "María López",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "/publicidades/publica-brandi.webp",
     category: "Salud",
     url: "routes/Blog"
   },

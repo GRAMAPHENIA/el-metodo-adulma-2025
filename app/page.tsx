@@ -16,9 +16,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <section className="p-10 ">
-        <VideoOverlay />
-      </section>
+      <VideoOverlay />
       <CardMision />
       <CourseLocationsSection />
       <AdSliderSection />

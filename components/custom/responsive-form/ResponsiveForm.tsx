@@ -13,10 +13,10 @@ export default function ResponsiveForm() {
   return (
     <section
       id="contact-form"
-      className="text-center rounded-lg text-sm darkÑshadow-lg py-12 my-24"
+      className="text-center rounded-lg text-sm py-12 lg:my-24"
     >
       <h2
-        className={`${vollkorn.className} text-7xl font-black text-stone-600 dark:text-stone-300 text-center`}
+        className={`${vollkorn.className} text-6xl lg:text-7xl font-black text-stone-600 dark:text-stone-300 text-center`}
       >
         Contacto
       </h2>

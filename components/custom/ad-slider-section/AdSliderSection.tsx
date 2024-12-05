@@ -10,89 +10,22 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Button } from "@/components/ui/button";
 
-interface Ad {
-  id: number;
-  image: string;
-  title: string;
-  description: string;
-}
+import { ads } from "@/data/ads";
 
-const ads: Ad[] = [
-  {
-    id: 1,
-    image: "/publicidades/publica-asesoria.webp",
-    title: "Asesoria Administrativa",
-    description: "Consultanos hoy mismo!",
-  },
-  {
-    id: 2,
-    image: "/publicidades/publica-brandi.webp",
-    title: "Libreria",
-    description: "Todo lo que necesitas en un solo lugar. ¡Visítanos!",
-  },
-  {
-    id: 3,
-    image: "/publicidades/publica-cuidado-de-adultos.webp",
-    title: "Acompañamiento",
-    description: "Siempre cerca de los que más importan. ¡Contáctanos!",
-  },
-  {
-    id: 4,
-    image: "/publicidades/publica-eco-dopler.webp",
-    title: "Special Discount 4",
-    description: "Save big on our premium selection.",
-  },
-  {
-    id: 5,
-    image: "/publicidades/publica-enfermeria.webp",
-    title: "Featured Item 5",
-    description: "Explore our top-rated products today.",
-  },
-  {
-    id: 6,
-    image: "/publicidades/publica-flores-de-bach.webp",
-    title: "Featured Item 5",
-    description: "Explore our top-rated products today.",
-  },
-  {
-    id: 7,
-    image: "/publicidades/publica-pintura.webp",
-    title: "Featured Item 5",
-    description: "Explore our top-rated products today.",
-  },
-  {
-    id: 8,
-    image: "/publicidades/publica-psicologic.webp",
-    title: "Featured Item 5",
-    description: "Explore our top-rated products today.",
-  },
-  {
-    id: 9,
-    image: "/publicidades/publica-sauce-violeta.webp",
-    title: "Featured Item 5",
-    description: "Explore our top-rated products today.",
-  },
-  {
-    id: 10,
-    image: "/publicidades/publica-taller-literario.webp",
-    title: "Featured Item 5",
-    description: "Explore our top-rated products today.",
-  },
-  {
-    id: 11,
-    image: "/publicidades/publica-uniendo-eslabones.webp",
-    title: "Featured Item 5",
-    description: "Explore our top-rated products today.",
-  },
- 
-];
-
+/**
+ * Componente que renderiza una sección de anuncios con un carrusel.
+ */
 export function AdSliderSection() {
   return (
-    <section className="px-0z md:px-8 my-40">
-      <h2 className="text-3xl font-bold text-center mb-8">Anuncios destacados</h2>
+    <section className="px-4 md:px-8 my-40">
+      <h2
+        className="text-3xl font-bold text-center mb-8"
+        id="anuncios-destacados"
+        aria-labelledby="anuncios-destacados"
+      >
+        Anuncios destacados
+      </h2>
       <Carousel
         opts={{
           align: "start",
@@ -119,18 +52,23 @@ export function AdSliderSection() {
                     <h3 className="font-semibold text-lg mb-2 text-stone-600 dark:text-stone-200">
                       {ad.title}
                     </h3>
-                    <p className="text-sm text-stone-500 dark:text-stone-200 mb-4 text-center">
-                      {ad.description}
-                    </p>
-                    {/* <Button>Shop Now</Button> */}
+                    {/* Descripción accesible para lectores de pantalla */}
+                    <p className="sr-only">{ad.description}</p>
                   </CardContent>
                 </Card>
               </div>
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        {/* Botones de navegación */}
+        <CarouselPrevious
+          className="hidden md:flex absolute left-8 top-1/2 transform -translate-y-1/2 z-10"
+          aria-label="Anterior"
+        />
+        <CarouselNext
+          className="hidden md:flex absolute right-8 top-1/2 transform -translate-y-1/2 z-10"
+          aria-label="Siguiente"
+        />
       </Carousel>
     </section>
   );
