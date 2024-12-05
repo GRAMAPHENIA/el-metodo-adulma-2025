@@ -1,12 +1,14 @@
+// Ruta: /app/galeria/page.tsx
+// Página principal para la sección de la galería.
+
 "use client";
 
 import { useEffect, useState } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
-import { Card, CardContent } from "@/components/ui/card"; 
+import { Card, CardContent } from "@/components/ui/card";
 import { GaleriaItem } from "@/types/galeria";
 import { galeriaData } from "@/data/galeria";
 import Image from "next/image";
-import Head from "next/head";
 
 export default function GaleriaPage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -14,7 +16,7 @@ export default function GaleriaPage() {
 
   useEffect(() => {
     const fetchData = async () => {
-      // Simulamos una carga de datos
+      // Simulamos una carga de datos con un retardo.
       await new Promise((resolve) => setTimeout(resolve, 1500));
       setItems(galeriaData);
       setIsLoading(false);
@@ -24,36 +26,15 @@ export default function GaleriaPage() {
   }, []);
 
   return (
-    <>
-      <Head>
-        <title>Galería de Imágenes | Hexágono</title>
-        <meta
-          name="description"
-          content="Explora nuestra galería de imágenes con impresionantes diseños y proyectos. Descubre ideas y conceptos visuales únicos."
-        />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Galería de Imágenes | Hexágono" />
-        <meta
-          property="og:description"
-          content="Explora nuestra galería de imágenes con impresionantes diseños y proyectos."
-        />
-        <meta property="og:image" content="/path/to/your/image.jpg" />
-        <meta property="og:url" content="https://www.hexagono.xyz/galeria" />
-        <meta name="twitter:title" content="Galería de Imágenes | Hexágono" />
-        <meta
-          name="twitter:description"
-          content="Explora nuestra galería de imágenes con impresionantes diseños y proyectos."
-        />
-        <meta name="twitter:image" content="/path/to/your/image.jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
+    <div className="container mx-auto px-4 py-8 lg:px-20">
+      {/* Encabezado de la página */}
+      <h1 className="text-3xl font-bold mb-8 mt-20">Galería</h1>
 
-
-      </Head>
-      <div className="container mx-auto px-4 py-8 lg:px-20 ">
-        <h1 className="text-3xl font-bold mb-8 mt-20">Galería</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {isLoading
-            ? Array.from({ length: 6 }).map((_, index) => (
+      {/* Contenido de la galería */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {isLoading
+          ? // Muestra esqueletos de carga mientras los datos se cargan
+            Array.from({ length: 6 }).map((_, index) => (
               <Card key={index} className="overflow-hidden">
                 <Skeleton className="h-48 w-full" />
                 <CardContent className="p-4">
@@ -62,7 +43,8 @@ export default function GaleriaPage() {
                 </CardContent>
               </Card>
             ))
-            : items.map((item) => (
+          : // Muestra los elementos de la galería cuando se cargan los datos
+            items.map((item) => (
               <Card key={item.id} className="overflow-hidden group relative">
                 <div className="w-full h-64 relative">
                   <Image
@@ -73,6 +55,7 @@ export default function GaleriaPage() {
                     className="transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
+                {/* Detalles al pasar el ratón */}
                 <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
                   <h3 className="text-white text-xl font-semibold mb-2">
                     {item.title}
@@ -81,8 +64,7 @@ export default function GaleriaPage() {
                 </div>
               </Card>
             ))}
-        </div>
       </div>
-    </>
+    </div>
   );
 }
