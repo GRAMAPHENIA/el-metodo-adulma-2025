@@ -54,26 +54,3 @@ Para correr el proyecto localmente, sigue estos pasos:
    ```
 
 El sitio estará disponible en `http://localhost:3000`.
-
-## Contribuir
-
-Las contribuciones son bienvenidas. Si deseas colaborar, por favor:
-
-1. Haz un fork del repositorio.
-2. Crea una nueva rama para tus cambios:
-   ```bash
-   git checkout -b feature/nueva-funcionalidad
-   ```
-3. Realiza tus cambios y haz commit:
-   ```bash
-   git commit -m "Descripción de los cambios"
-   ```
-4. Sube tu rama a GitHub:
-   ```bash
-   git push origin feature/nueva-funcionalidad
-   ```
-5. Crea un Pull Request en GitHub.
-
-## Licencia
-
-Este proyecto está licenciado bajo la [MIT License](./LICENSE).

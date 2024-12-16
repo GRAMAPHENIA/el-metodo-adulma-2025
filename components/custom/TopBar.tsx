@@ -18,13 +18,13 @@ export default function Topbar() {
       <div className="py-3 px-3 flex justify-between items-center bg-primary/70 dark:bg-secondary/80 fixed z-10 lg:rounded-lg w-full md:w-[95%] lg:w-[1200px] backdrop-blur-md shadow-md">
         {/* Logo */}
         <div className="flex items-center">
-          <Image
+          {/* <Image
             height={30}
             width={30}
             src="/logo.png"
             alt="Logo"
             className="w-8 h-8 sm:w-10 sm:h-10 object-cover"
-          />
+          /> */}
           <p className="ml-2 text-stone-600 dark:text-stone-300 font-bold hidden lg:block">
             EL MÉTODO
           </p>
